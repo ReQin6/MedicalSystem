@@ -1,0 +1,244 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    line-height: 1.5;
+    overflow: hidden;
+    position: relative;
+}
+
+form {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    filter: blur(0.2px);
+}
+
+#admin_autorisation{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#error{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: red;
+    background-color: #4A1111;
+    padding: 10px;
+    border: 2px solid #7A1111;
+    cursor: pointer;
+}
+
+select, input[type="text"], input[type="password"] {
+    background-color: #222;
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+    padding: 10px;
+    margin: 5px 0;
+    font-family: 'Comic Sans MS', cursive;
+    transition: transform 0.3s ease; 
+}
+
+select:hover, input[type="text"]:hover, input[type="password"]:hover {
+    transform: scale(1.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    opacity: 0.9; 
+    position: relative;
+    z-index: 0;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-style: italic;
+    transition: background-color 0.3s;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+td:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+input[type="submit"] {
+    background-color: #ff6699;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff3366;
+    transform: scale(1.05);
+}
+
+#philosophy {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    filter: blur(1px);
+}
+
+@keyframes fragmented {
+    0% { transform: translateY(0); }
+    3% { transform: translateY(-0.5px) rotate(0.3deg); }
+    4% { transform: translateY(0); }
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none; 
+}
+#sql-terminal {
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    width: calc(100% - 40px);
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    filter: blur(0.2px);
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+textarea {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 40px);
+    background-color: #222;
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    transition: transform 0.3s ease; 
+    resize: none;
+}
+
+textarea:hover {
+    transform: scale(1.005);
+}
+
+input[type="submit"][name="execute_query"] {
+    background-color: #ff6699;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+input[type="submit"][name="execute_query"]:hover {
+    background-color: #ff3366;
+    transform: scale(1.05);
+}
+
+.sql-results {
+    width: 100%;
+    border-collapse: collapse;
+    opacity: 0.9;
+    margin-top: 20px;
+}
+
+.sql-results th, .sql-results td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-style: italic;
+    transition: background-color 0.3s;
+}
+
+.sql-results th {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sql-results td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sql-results td:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    font-family: 'Courier New', monospace;
+}
+
+h2 {
+    animation: fragmented 25s infinite alternate;
+    animation-timing-function: revert;
+}
+
+.table_show{
+    height: calc(64% - 100px - 1.66em); 
+    overflow-y: scroll;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table_show::-webkit-scrollbar {
+  display: none;
+}
+
+a#in {
+    position:absolute; 
+    top: 10px; 
+    right: 20px; 
+    z-index: 1000; 
+    color: #ffcc00; 
+    border: 1px solid #ffcc00; 
+    padding: 5px; 
+    background: #414129; 
+    text-decoration: none;
+}
+
+@media (max-height: 550px) {
+    #sql-terminal {
+        display: none;
+    }
+    .table_show{
+        height: calc(89% - 65px - 1.66em); 
+    }
+}
+

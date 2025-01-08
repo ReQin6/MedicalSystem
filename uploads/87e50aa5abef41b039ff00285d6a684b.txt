@@ -1,0 +1,8 @@
+specific_weight:1
+nitrites:1
+ketone_bodies:1
+protein:1
+leukocytes:1
+erytrocytes:1
+phone:Honor
+type:GoodLife
